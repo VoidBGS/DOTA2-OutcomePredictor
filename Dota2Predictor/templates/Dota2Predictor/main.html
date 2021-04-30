@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dota 2 Game predictor</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="flex-wrap" id="border">
+    <img class='logo' src="{% static 'pics/dota2logo.png' %}"></img>
+</div>
+<div class="main-page">
+    <div class="flex-wrap" id="heavy-padding">
+        <h1 class="main-title">Outcome Predictor</h1>
+    </div>
+    <div class="flex-wrap" id="space-bottom">
+        <form>
+            <div class="input-row">
+                <div>
+                    <label>Skill</label><br>
+                    <div class="radio-button-wrap">
+                        <input type="radio" id="very-high-skill" name="skill" value="Very High Skill">
+                        <label for="very-high-skill">Very High Skill</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="high-skill" name="skill" value="High Skill">
+                        <label for="high-skill">High Skill</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="normal-skill" name="skill" value="Normal Skill">
+                        <label for="normal-skill">Normal Skill</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="unknown-skill" name="skill" value="Unknown Skill">
+                        <label for="unknown-skill">Unknown Skill</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="no-stats-skill" name="skill" value="No stats recorded">
+                        <label for="no-stats-skill">No stats recorded</label>
+                    </div>
+                </div>
+                <div>
+                    <label>Role</label><br>
+                    <div class="radio-button-wrap ">
+                        <input type="radio" id="support" name="role" value="Support">
+                        <label for="support">Support</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="core" name="role" value="Core">
+                        <label for="core">Core</label>
+                    </div>
+                </div>
+                <div>
+                    <label>Lane</label><br>
+                    <div class="radio-button-wrap">
+                        <input type="radio" id="safelane" name="lane" value="Safelane">
+                        <label for="safelane">Safelane</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="offlane" name="lane" value="Offlane">
+                        <label for="offlane">Offlane</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="midlane" name="lane" value="Midlane">
+                        <label for="midlane">Midlane</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="jungle" name="lane" value="Jungle">
+                        <label for="jungle">Jungle</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="roaming" name="lane" value="Roaming">
+                        <label for="roaming">Roaming</label>
+                    </div>
+                </div>
+                <div>
+                    <label>Game Type</label><br>
+                    <div class="radio-button-wrap">
+                        <input type="radio" id="normal-type" name="type" value="Normal">
+                        <label for="normal-type">Normal</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="ranked-type" name="type" value="Ranked">
+                        <label for="ranked-type">Ranked</label>
+                    </div>
+                    <div class="radio-button-wrap increase-top-margin">
+                        <input type="radio" id="practice-type" name="type" value="Practice">
+                        <label for="practice-type">Practice</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-row">
+
+                <div><label>Genre</label><br>
+                    <div class="custom-select">
+                        <select class="custom-select">
+                            <option value="0">All Pick</option>
+                            <option value="1">Turbo</option>
+                            <option value="2">Ability Draft</option>
+                            <option value="3">Single Draft</option>
+                            <option value="4">All Random</option>
+                            <option value="5">Captains Mode</option>
+                            <option value="6">Random Draft</option>
+                            <option value="7">Least Played</option>
+                            <option value="8">All Random Deathmatch</option>
+                            <option value="9">None</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="input-row">
+                <div><label>KDA Score</label><br>
+                    <input type="text"><br>
+                </div>
+                <div>
+                    <label>Length</label><br>
+                    <input type="text"><br>
+                </div>
+                <div>
+                    <label>Hero</label><br>
+                    <input type="text"><br>
+                </div>
+            </div>
+            <div class="input-row center-middle">
+                <input type="button" id="BigGreenButton" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
