@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dota 2 Game predictor</title>
+    <title>Dota 2 Game Predictor</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
@@ -15,7 +15,8 @@
         <h1 class="main-title">Outcome Predictor</h1>
     </div>
     <div class="flex-wrap" id="space-bottom">
-        <form>
+        <form action="result/" method="POST">
+            {% csrf_token %}
             <div class="input-row">
                 <div>
                     <label>Skill</label><br>
@@ -43,34 +44,34 @@
                 <div>
                     <label>Role</label><br>
                     <div class="radio-button-wrap ">
-                        <input type="radio" id="support" name="role" value="Support">
+                        <input type="radio" id="support" name="role" value="support">
                         <label for="support">Support</label>
                     </div>
                     <div class="radio-button-wrap increase-top-margin">
-                        <input type="radio" id="core" name="role" value="Core">
+                        <input type="radio" id="core" name="role" value="core">
                         <label for="core">Core</label>
                     </div>
                 </div>
                 <div>
                     <label>Lane</label><br>
                     <div class="radio-button-wrap">
-                        <input type="radio" id="safelane" name="lane" value="Safelane">
+                        <input type="radio" id="safelane" name="lane" value="safelane">
                         <label for="safelane">Safelane</label>
                     </div>
                     <div class="radio-button-wrap increase-top-margin">
-                        <input type="radio" id="offlane" name="lane" value="Offlane">
+                        <input type="radio" id="offlane" name="lane" value="offlane">
                         <label for="offlane">Offlane</label>
                     </div>
                     <div class="radio-button-wrap increase-top-margin">
-                        <input type="radio" id="midlane" name="lane" value="Midlane">
+                        <input type="radio" id="midlane" name="lane" value="midlane">
                         <label for="midlane">Midlane</label>
                     </div>
                     <div class="radio-button-wrap increase-top-margin">
-                        <input type="radio" id="jungle" name="lane" value="Jungle">
+                        <input type="radio" id="jungle" name="lane" value="jungle">
                         <label for="jungle">Jungle</label>
                     </div>
                     <div class="radio-button-wrap increase-top-margin">
-                        <input type="radio" id="roaming" name="lane" value="Roaming">
+                        <input type="radio" id="roaming" name="lane" value="roaming">
                         <label for="roaming">Roaming</label>
                     </div>
                 </div>
@@ -94,36 +95,36 @@
 
                 <div><label>Genre</label><br>
                     <div class="custom-select">
-                        <select class="custom-select">
-                            <option value="0">All Pick</option>
-                            <option value="1">Turbo</option>
-                            <option value="2">Ability Draft</option>
-                            <option value="3">Single Draft</option>
-                            <option value="4">All Random</option>
-                            <option value="5">Captains Mode</option>
-                            <option value="6">Random Draft</option>
-                            <option value="7">Least Played</option>
-                            <option value="8">All Random Deathmatch</option>
-                            <option value="9">None</option>
+                        <select class="custom-select" name="mode">
+                            <option value="All Pick">All Pick</option>
+                            <option value="Turbo">Turbo</option>
+                            <option value="Ability Draft">Ability Draft</option>
+                            <option value="Single Draft">Single Draft</option>
+                            <option value="All Random">All Random</option>
+                            <option value="Captains Mode">Captains Mode</option>
+                            <option value="Random Draft">Random Draft</option>
+                            <option value="Least Played">Least Played</option>
+                            <option value="All Random">All Random</option>
+                            <option value="Captains Draft">Captains Draft</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="input-row">
                 <div><label>KDA Score</label><br>
-                    <input type="text"><br>
+                    <input type="text" name="kda"><br>
                 </div>
                 <div>
                     <label>Length</label><br>
-                    <input type="text"><br>
+                    <input type="text" name="length"><br>
                 </div>
                 <div>
                     <label>Hero</label><br>
-                    <input type="text"><br>
+                    <input type="text" name="hero"><br>
                 </div>
             </div>
             <div class="input-row center-middle">
-                <input type="button" id="BigGreenButton" value="Submit">
+                <input type="submit" id="BigGreenButton" value="Submit">
             </div>
         </form>
     </div>
