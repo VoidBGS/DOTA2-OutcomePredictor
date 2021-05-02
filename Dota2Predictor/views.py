@@ -9,10 +9,11 @@ def predictTheGame(hero, skill, role, lane, type, mode, kda, length):
     import pickle
 
     model = pickle.load(open("C:/Users/krist/Desktop/University 2021/djangoProject/Dota2Predictor/knn.sav", "rb"))
+    svc = pickle.load(open("C:/Users/krist/Desktop/University 2021/djangoProject/Dota2Predictor/svc_1.sav", "rb"))
     encoder = pickle.load(open("C:/Users/krist/Desktop/University 2021/djangoProject/Dota2Predictor/hotencoder.sav", "rb"))
     labels = encoder.transform([[hero, skill, role, lane, type, mode, kda, length]])
     print(encoder.get_params())
-    prediction = model.predict(labels)
+    prediction = svc.predict(labels)
 
     if prediction[0] == "Win":
         return "Victory"
@@ -21,7 +22,7 @@ def predictTheGame(hero, skill, role, lane, type, mode, kda, length):
 
 
 def result(request):
-    try:
+    #try:
         skill = request.POST['skill']
         role = request.POST['role']
         lane = request.POST['lane']
@@ -34,5 +35,5 @@ def result(request):
         result = predictTheGame(hero, skill, role, lane, type, mode, kda, length)
 
         return render(request, 'Dota2Predictor/result.html', {'result': result})
-    except:
-        return render(request, 'Dota2Predictor/result.html', {'result': 'None'})
+    #except:
+     #   return render(request, 'Dota2Predictor/result.html', {'result': 'No Details'})

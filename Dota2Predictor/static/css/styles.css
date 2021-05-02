@@ -45,7 +45,7 @@ form label {
 }
 
 #space-bottom{
-    margin-top: 12rem;
+    margin-top: 8.9rem;
 }
 
 .input-row{
@@ -57,7 +57,7 @@ form label {
 }
 
 .input-row div{
-    padding: 15px;
+    padding: 12px;
 }
 
 .main-title {
@@ -97,7 +97,7 @@ form label {
     padding-bottom: 5px;
     padding-left: 100px;
     padding-right: 100px;
-    margin: 40px;
+    margin: 20px;
     font-size: 14pt;
     box-shadow: 3px 3px 3px #0F0F0F;
     border-radius: 3px;
