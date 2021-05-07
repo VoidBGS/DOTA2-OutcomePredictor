@@ -1,4 +1,4 @@
-# DOTA2-OutcomePredictor
+# About this project
 A.I based Python application built with Django, which tries to predict the outcome of a certain dota 2 game, based on multiple parameters. I created this website using css and html.  
 
 ## Features
