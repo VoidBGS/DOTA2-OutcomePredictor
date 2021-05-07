@@ -2,7 +2,7 @@
 A.I based Python application built with Django, which tries to predict the outcome of a certain dota 2 game, based on multiple parameters. I created this website using css and html.  
 
 ## Features
->**Predicting a Dota 2 Game** - I am using Support-vector Machines as my model of choice for this website. In the future I also might add an option to switch between 2 different models, just for the sake of having more options and a more solid answer in the end.
+>**Predicting** - I am using Support-Vector Machines as my model of choice for this website. In the future I also might add an option to switch between the current one and KNN, just for the sake of having more options and a more solid answer in the end.
 
 ### Main Page
 ![Main Page Picture](https://i.ibb.co/bKH6Yn8/screeneidota.png)
